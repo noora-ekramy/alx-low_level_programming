@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include<stdio.h>
 #include <time.h>
-//this is a function
 int main(void)
 {
 int n;
