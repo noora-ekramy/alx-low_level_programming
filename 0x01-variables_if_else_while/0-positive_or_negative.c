@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include<stdio.h>
 #include <time.h>
+/* lol*/
 int main(void)
 {
 int n;
