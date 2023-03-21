@@ -4,10 +4,10 @@
  *
  * Return: 1
  */
-int main(void) 
+int main(void)
 {
 char letter = 'a';
-    
+
 while (letter <= 'z')
 {
 putchar(letter);
