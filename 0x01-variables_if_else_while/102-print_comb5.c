@@ -16,6 +16,10 @@ int num1 = i / 10;
 int num2 = i % 10;
 int num3 = j / 10;
 int num4 = j % 10;
+if (num1 == num3 && num2 == num4)
+{
+continue;
+}
 putchar(num1 ? num1 + '0' : '0');
 putchar(num2 ? num2 + '0' : '0');
 putchar(' ');
