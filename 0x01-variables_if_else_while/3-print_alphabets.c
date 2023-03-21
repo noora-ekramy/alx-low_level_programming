@@ -13,7 +13,7 @@ while (lowercase_letter <= 'z')
 {
 putchar(lowercase_letter);
 lowercase_letter++;
-} 
+}
 while (uppercase_letter <= 'Z')
 {
 putchar(uppercase_letter);
