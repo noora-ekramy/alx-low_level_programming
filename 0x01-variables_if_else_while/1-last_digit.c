@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include<stdio.h>
 #include <time.h>
-/**
+/*
  * main - Makes the sum of two numbers
  *
  * Return: 0
- *//
+ */
 int main(void)
 {
 int n;
