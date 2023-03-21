@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include<stdio.h>
 #include <time.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Makes the sum of two numbers
+ *
+ * Return: 0
+ *//
 int main(void)
 {
 int n;
