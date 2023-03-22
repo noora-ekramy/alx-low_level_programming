@@ -1,40 +1,35 @@
 #include <stdio.h>
-#include"main.h"
 /**
- * print_fibonacci_sequence - prints the first 50 Fibonacci numbers
- * starting with 1 and 2, separated by comma and space
+ * main - function of the program.
+ * This function is the entry point of the program and is called by the
+ * system when the program is executed. It prints the "_putchar" string
+ * by a new line and returns 0 to indicate successful execution.
  *
- * Return: void
- */
-void print_fibonacci_sequence(void)
-{
-int i;
-unsigned long long current, previous, temp;
-
-current = 2;
-previous = 1;
-
-printf("%llu, %llu", previous, current);
-
-for (i = 3; i <= 50; i++)
-{
-temp = current;
-current = previous + current;
-previous = temp;
-
-printf(", %llu", current);
-}
-
-printf("\n");
-}
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * Return:  0 to indicate successful execution.
  */
 int main(void)
 {
-print_fibonacci_sequence();
+int i;
+unsigned long int a = 1, b = 2;
+unsigned long int next;
+printf("%lu", a);
+printf(", ");
+printf("%lu", b);
+printf(", ");
+for (i = 3; i <= 50; i++)
+{
+next = a;
+a = b;
+b = next + b;
+printf("%lu", b);
+if (i != 50)
+{
+printf(", ");
+}
+else
+{
+printf(" \n");
+}
+}
 return (0);
 }
