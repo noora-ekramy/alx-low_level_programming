@@ -4,7 +4,7 @@
  * the Fibonacci sequence whose
  * values do not exceed 4,000,000.
  *
- * Return : the sum.
+ * Return:  0 to indicate successful execution.
  */
 int main(void)
 {
