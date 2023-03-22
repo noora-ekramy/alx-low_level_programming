@@ -19,7 +19,8 @@ if (current % 2 == 0)
 {
 sum += current;
 }
-int temp = current;
+int temp;
+temp = current;
 current += previous;
 previous = temp;
 }
