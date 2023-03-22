@@ -1,13 +1,12 @@
+#include <stdio.h>
 /**
- * Calculates the sum of even-valued terms i
+ * main - Calculates the sum of even-valued terms i
  * the Fibonacci sequence whose
  * values do not exceed 4,000,000.
  *
- * Returns the sum.
+ * Returns : the sum.
  */
-#include <stdio.h>
-
-int main()
+int main(void)
 {
 int current = 2;
 int previous = 1;
