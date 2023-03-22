@@ -12,16 +12,16 @@ int main(void)
 int i;
 unsigned long  a = 1, b = 2;
 unsigned long  next;
-printf("%ld", a);
+printf("%llu", a);
 printf(", ");
-printf("%ld", b);
+printf("%llu", b);
 printf(", ");
 for (i = 3; i <= 98; i++)
 {
 next = a;
 a = b;
 b = next + b;
-printf("%ld", b);
+printf("%llu", b);
 if (i != 98)
 {
 printf(", ");
