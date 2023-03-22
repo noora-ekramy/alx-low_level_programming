@@ -12,6 +12,7 @@ int main()
 int current = 2;
 int previous = 1;
 int sum = 0;
+int temp;
 
 while (current < 4000000)
 {
@@ -19,7 +20,6 @@ if (current % 2 == 0)
 {
 sum += current;
 }
-int temp;
 temp = current;
 current += previous;
 previous = temp;
