@@ -7,6 +7,9 @@ int _putchar(char c);
 /* print_alphabet_x10 - func*/
 void print_alphabet_x10(void);
 
+/* print_alphabet_x10 - func*/
+void print_alphabet(void);
+
 /* _islower - func*/
 int _islower(int c);
 
