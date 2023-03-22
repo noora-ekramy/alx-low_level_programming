@@ -10,8 +10,8 @@
 int main(void)
 {
 int i;
-long a = 1, b = 2;
-long next;
+unsigned long  a = 1, b = 2;
+unsigned long  next;
 printf("%ld", a);
 printf(", ");
 printf("%ld", b);
