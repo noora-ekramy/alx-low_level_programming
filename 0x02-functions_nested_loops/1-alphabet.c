@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - function of the program.
+ * print_alphabet - Prints the alphabet in lowercase
+ *
+ * Return: void
  */
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
-char c;
-int i;
-for (i = 0; i < 10; i++)
+char letter = 'a';
+  
+while (letter <= 'z')
 {
-for (c = 'a'; c <= 'z'; c++)
-{
-_putchar(c);
+_putchar(letter);
+letter++;
 }
 _putchar('\n');
-}
 }
