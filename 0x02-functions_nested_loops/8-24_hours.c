@@ -3,7 +3,6 @@
  * jack_bauer - Prints every minute of the day of Jack Bauer
  *
  * Description: This function prints every
- * 
  */
 void jack_bauer(void)
 {
