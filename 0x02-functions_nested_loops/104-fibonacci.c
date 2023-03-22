@@ -18,7 +18,7 @@ b = 2;
 next = a;
 a = b;
 b = next + b;
-printf("%d", next());
+printf("%d", next);
 if (i != 98) {
 printf(", ");
 } else {
