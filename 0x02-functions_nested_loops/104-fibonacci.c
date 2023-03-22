@@ -16,13 +16,13 @@ printf("%ld", a);
 printf(", ");
 printf("%ld", b);
 printf(", ");
-for (i = 0; i <= 98 - 2; i++)
+for (i = 0; i <= 98 - 3; i++)
 {
 next = a;
 a = b;
 b = next + b;
 printf("%ld", b);
-if (i != 98 - 2)
+if (i != 98 - 3)
 {
 printf(", ");
 }
@@ -31,5 +31,5 @@ else
 printf("\n");
 }
 }
-    return (0);
+return (0);
 }
