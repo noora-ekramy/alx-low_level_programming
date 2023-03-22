@@ -10,18 +10,18 @@
 int main(void)
 {
 int i;
-unsigned long  a = 1, b = 2;
-unsigned long  next;
-printf("%lu", a);
+unsigned long long  a = 1, b = 2;
+unsigned long long  next;
+printf("%llu", a);
 printf(", ");
-printf("%lu", b);
+printf("%llu", b);
 printf(", ");
 for (i = 3; i <= 98; i++)
 {
 next = a;
 a = b;
 b = next + b;
-printf("%lu", b);
+printf("%llu", b);
 if (i != 98)
 {
 printf(", ");
