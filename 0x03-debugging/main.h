@@ -7,6 +7,8 @@ int largest_number(int a, int b, int c);
 
 void print_remaining_days(int month, int day, int year);
 
+int convert_day(int month, int day);
+
 /* main - the main function of the program */
 int main(void);
 
