@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include"main.h"
 /**
- * main - Entry point for the FizzBuzz program
+ * main - Entry point for the 
  *
  * Return: Always 0
  */
