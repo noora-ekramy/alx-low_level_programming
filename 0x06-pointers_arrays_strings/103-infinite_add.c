@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * infinite_add - adds two numbers stored as strings
  * @n1: first number
