@@ -1,14 +1,13 @@
 #include "main.h"
 /**
- * infinite_add - adds two numbers stored as strings
+ * infinite_add - adds two numbers 
  * @n1: first number
  * @n2: second number
  * @r: buffer to store result
  * @size_r: size of the buffer
  *
- * Return: pointer to the result if successful, 0 if result can't be stored in buffer
+ * Return: pointer to the result 
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int i, j, k, carry, sum;
@@ -22,10 +21,10 @@ for (j = 0; n2[j] != '\0'; j++)
 /* Check if result can be stored in buffer */
 if (i >= size_r || j >= size_r || size_r == 0)
 return (0);
-
 /* Add digits from right to left */
 carry = 0;
-for (i -= 1, j -= 1, k = 0; i >= 0 || j >= 0 || carry > 0; i--, j--, k++)
+for (i -= 1, j -= 1, k = 0; i >= 0 || j >= 0 
+|| carry > 0; i--, j--, k++)
 {
 sum = carry;
 if (i >= 0)
