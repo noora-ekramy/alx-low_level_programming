@@ -21,7 +21,7 @@ return (guess);
 }
 if (guess * guess > n)
 {
-return -(1);
+return (-1);
 }
 new_guess = guess + 1;
 
