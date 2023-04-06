@@ -12,14 +12,17 @@ int sqrt_recursion_helper(int n, int guess)
 int new_guess;
 
 if (n == 0)
+{
 return 0;
-
+}
 if (guess * guess == n)
+{
 return guess;
-
+}
 if (guess * guess > n)
+{
 return -1;
-
+}
 new_guess = guess + 1;
 
 return sqrt_recursion_helper(n, new_guess);
