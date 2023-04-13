@@ -4,7 +4,7 @@
 #include <limits.h>
 
 /**
- * main - multiplies nums
+ * main - multiplies two positive numbers
  * @argc: n arguments
  * @argv: args
  * Return: int
