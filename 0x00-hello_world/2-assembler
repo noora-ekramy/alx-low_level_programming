@@ -1,1 +1,7 @@
+#!/bin/bash
+read -p "Enter the C file name (without extension): " CFILE
+gcc -S $CFILE.c -o $CFILE.s
+if [ $? -eq 0 ]; then
+  echo "Assembly code generated successfully."
+else
 
