@@ -1,2 +1,2 @@
 #!/bin/bash
-read -p "Enter the C file name (without extension): " CFILE && gcc -S $CFILE.c -o $CFILE.s && echo "Output file: $CFILE.s"
+gcc $CFILE -S
