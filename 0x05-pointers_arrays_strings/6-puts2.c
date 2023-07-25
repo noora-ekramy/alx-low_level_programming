@@ -1,21 +1,25 @@
-#include"main.h"
-#include <unistd.h>
+#include "main.h"
 
 /**
- * puts2 - prints every other character of a string, starting with the first
- * @str: a pointer to a string
- *
- * Return: void
+ * puts2 - prints one char out of 2 of a string
+ * followed by a new line
+ * @str: string to print the chars from
  */
 void puts2(char *str)
 {
-int i = 0;
+	int len, i;
 
-while (str[i] != '\0')
-{
-write(1, &str[i], 1);
-i += 2;
-}
+	len = 0;
 
-write(1, "\n", 1);
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	for (i = 0; i < len; i += 2)
+	{
+		_putchar(str[i]);
+	}
+
+	_putchar('\n');
 }
