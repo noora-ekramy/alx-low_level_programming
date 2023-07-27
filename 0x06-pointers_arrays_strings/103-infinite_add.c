@@ -1,50 +1,60 @@
+#include "holberton.h"
 #include "main.h"
+#include <stdio.h>
 /**
- * infinite_add - adds two numbers 
- * @n1: first number
- * @n2: second number
- * @r: buffer to store result
- * @size_r: size of the buffer
- *
- * Return: pointer to the result 
+ * infinite_add - add 2 strings.
+ * @n1: string1.
+ * @n2: string2.
+ * @r: buffer
+ * @size_r: buffer size
+ * Return: String with all letters in ROT13 base.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int i, j, k, carry, sum;
-
-/* Find length of n1 and n2 */
-for (i = 0; n1[i] != '\0'; i++)
-;
-for (j = 0; n2[j] != '\0'; j++)
-;
-
-/* Check if result can be stored in buffer */
-if (i >= size_r || j >= size_r || size_r == 0)
-return (0);
-/* Add digits from right to left */
-carry = 0;
-for (i -= 1, j -= 1, k = 0; i >= 0 || j >= 0 
-|| carry > 0; i--, j--, k++)
-{
-sum = carry;
-if (i >= 0)
-sum += n1[i] - '0';
-if (j >= 0)
-sum += n2[j] - '0';
-carry = sum / 10;
-r[k] = (sum % 10) + '0';
-}
-
-/* Reverse the result string */
-for (i = 0, j = k - 1; i < j; i++, j--)
-{
-sum = r[i];
-r[i] = r[j];
-r[j] = sum;
-}
-
-/* Add null terminator */
-r[k] = '\0';
-
-return (r);
+	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;
+	
+	while (n1[a_len] != '\0')
+		a_len++;
+	while (n2[b_len] != '\0')
+		b_len++;
+	if (a_len > b_len)
+		biggest = a_len;
+	else
+		biggest = b_len;
+	if ((biggest + 1) >= size_r)
+		return (0);
+	r[biggest + 1] = '\0';
+	
+	while (biggest >= 0)
+	{
+		a = (n1[a_len - 1] - '0');
+		b = (n1[b_len - 1] - '0');
+		if (a_len > 0 && b_len > 0)
+			sum = a + b + carry;
+		else if (a_len < 0 && b_len > 0)
+			sum = b + carry;
+		else if (a_len > 0 && b_len < 0)
+			sum = a + carry;
+		else
+			sum = carry;
+		
+		if (sum > 9)
+		{
+			carry = sum / 10;
+			sum = (sum % 10) + '0';
+		}
+		else
+		{
+			carry = 0;
+			sum = sum + '0';
+		}
+		r[biggest] = sum;
+		a_len--;
+		b_len--;
+		biggest--;
+	}
+	if (*(r) != 0)
+		return (r);
+	else
+		return (r + 1);
 }
