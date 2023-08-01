@@ -10,20 +10,35 @@ char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack)
 	{
-		char *start = haystack;
-		char *pattern = needle;
-
-		while (*pattern && *haystack && *haystack == *pattern)
+		if ((*haystack == *needle && coincidence(haystack, needle)) || !*needle)
+		{
+			return haystack;
+		}
+		else
 		{
 			haystack++;
-			pattern++;
 		}
+	}
+	return NULL;
+}
 
-		if (*pattern == '\0')
-			return start;
-
-		haystack = start + 1;
+/**
+ * coincidence - checks if a string b is a substring of string a.
+ * @a: source string
+ * @b: substring to be searched
+ *
+ * Return: 1 if there is a coincidence (substring found), otherwise 0.
+ */
+int coincidence(char *a, char *b)
+{
+	while (*b && *b == *a)
+	{
+		b++;
+		a++;
 	}
 
-	return NULL;
+	if (*b == '\0')
+		return 1;
+	else
+		return 0;
 }
