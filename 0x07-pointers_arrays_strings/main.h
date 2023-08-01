@@ -10,7 +10,7 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 
 char *_strchr(char *s, char c);
 
-int coincidence(char *a, char *b)
+int coincidence(char *a, char *b);
 
 unsigned int _strspn(char *s, char *accept);
 
