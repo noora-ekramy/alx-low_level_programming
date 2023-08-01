@@ -1,44 +1,38 @@
 #include "main.h"
 /**
- * _strstr - finds the first occurrence of a substring in a string.
- * @haystack: source string
- * @needle: searching substring
+ * _strstr - Locates a substring.
+ * @haystack: The string
+ * @needle: The substring to be located.
  *
- * Return: pointer to the first occurrence of the substring, or NULL if not found.
+ * Return: If the substring is located 
+ *         If the substring is not located - NULL.
  */
+
 char *_strstr(char *haystack, char *needle)
 {
+	int ind;
+
+	if (*needle == 0)
+		return (haystack);
+
 	while (*haystack)
 	{
-		if ((*haystack == *needle && coincidence(haystack, needle) == 1) || !*needle)
-		{
-			return (haystack);
-		}
-		else
-		{
-			haystack++;
-		}
-	}
-	return (0);
-}
+		ind = 0;
 
-/**
- * coincidence - checks if a string b is a substring of string a.
- * @a: source string
- * @b: substring to be searched
- *
- * Return: 1 if there is a coincidence (substring found), otherwise 0.
- */
-int coincidence(char *a, char *b)
-{
-	while (*b && *b == *a)
-	{
-		b++;
-		a++;
+		if (haystack[ind] == needle[ind])
+		{
+			do {
+
+				if (needle[ind + 1] == '\0')
+					return (haystack);
+
+				ind++;
+
+			} while (haystack[ind] == needle[ind]);
+		}
+
+		haystack++;
 	}
 
-	if (*b == '\0')
-		return (1);
-	else
-		return (0);
+	return ('\0');
 }
