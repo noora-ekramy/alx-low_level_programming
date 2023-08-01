@@ -3,8 +3,7 @@
  * _strstr - Locates a substring.
  * @haystack: The string
  * @needle: The substring to be located.
- *
- * Return: If the substring is located 
+ * Return: If the substring is located
  *         If the substring is not located - NULL.
  */
 
