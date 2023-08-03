@@ -8,24 +8,27 @@
  */
 void largest_prime_factor(unsigned long n)
 {
-unsigned long i;
+	unsigned long i;
 
-for (i = 2; i <= n; i++)
-{
-while (n % i == 0)
-{
-n /= i;
-}
-}
+	for (i = 2; i <= n; i++)
+	{
+		while (n % i == 0)
+		{
+			n /= i;
+		}
+	}
 
-printf("%lu\n", i - 1);
+	printf("%lu\n", i - 1);
 }
-
+/**
+ *main - mian finction of the programe
+ *
+ * Return: Voide
+ */
 int main(void)
 {
-unsigned long n = 612852475143;
+	unsigned long n = 612852475143;
 
-largest_prime_factor(n);
-
-return (0);
+	largest_prime_factor(n);
+	return (0);
 }
