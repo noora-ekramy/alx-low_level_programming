@@ -16,6 +16,7 @@ int main(void)
 			int num2 = i % 10;
 			int num3 = j / 10;
 			int num4 = j % 10;
+
 			putchar(num1 + '0');
 			putchar(num2 + '0');
 			putchar(' ');
@@ -29,5 +30,6 @@ int main(void)
 			putchar(' ');
 		}
 	}
+	putchar('\n');
 	return (0);
 }
