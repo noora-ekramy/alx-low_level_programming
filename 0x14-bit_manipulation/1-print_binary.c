@@ -11,5 +11,12 @@ void print_binary(unsigned long int n)
 	{
 		print_binary(n / 2);
 	}
-	putchar('0' + (n % 2));
+	if (n % 2 == 1)
+	{
+		printf("1");
+	}
+	else
+	{
+		printf("0");
+	}
 }
