@@ -1,4 +1,4 @@
-#includ "mian.h"
+#include "mian.h"
 /**
  * set_bit - sets the value of a bit to 1 at a given index
  * @n: number
